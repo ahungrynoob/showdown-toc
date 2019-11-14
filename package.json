@@ -1,0 +1,63 @@
+{
+  "name": "showdown-toc",
+  "version": "0.1.0",
+  "description": "A showdown extension to output toc info.",
+  "main": "lib/index.js",
+  "unpkg": "dist/index.js",
+  "module": "es/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "father build",
+    "test": "father test",
+    "ci": "father test --coverage",
+    "lint-staged": "lint-staged",
+    "lint-staged:ts": "eslint --ext .ts,.tsx",
+    "lint:fix": "eslint --fix --cache --format=pretty **/*.ts",
+    "lint:ts": "eslint --cache --format=pretty **/*.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,md,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.ts": "npm run lint-staged:ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahungrynoob/showdown-toc.git"
+  },
+  "keywords": [
+    "showdown-extension",
+    "showdown",
+    "markdown",
+    "markdown-toc"
+  ],
+  "author": "ahungrynoob",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahungrynoob/showdown-toc/issues"
+  },
+  "homepage": "https://github.com/ahungrynoob/showdown-toc#readme",
+  "devDependencies": {
+    "@types/showdown": "^1.9.3",
+    "@umijs/fabric": "^1.2.1",
+    "eslint": "^6.6.0",
+    "father": "^2.24.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.0.0",
+    "prettier": "^1.19.1",
+    "showdown": "^1.9.1",
+    "typescript": "^3.7.2"
+  },
+  "peerDependencies": {
+    "showdown": "^1.9.1"
+  }
+}
