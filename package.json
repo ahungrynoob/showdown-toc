@@ -2,10 +2,10 @@
   "name": "showdown-toc",
   "version": "0.1.0",
   "description": "A showdown extension to output toc info.",
-  "main": "lib/index.js",
-  "unpkg": "dist/index.js",
-  "module": "es/index.js",
-  "types": "types/index.d.ts",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.umd.min.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "father build",
     "test": "father test",
@@ -47,6 +47,7 @@
   },
   "homepage": "https://github.com/ahungrynoob/showdown-toc#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.23",
     "@types/showdown": "^1.9.3",
     "@umijs/fabric": "^1.2.1",
     "eslint": "^6.6.0",

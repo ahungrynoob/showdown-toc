@@ -3,6 +3,5 @@ export default {
   cjs: 'rollup',
   umd: {
     name: 'showdownToc',
-    file: 'index',
   },
 };
