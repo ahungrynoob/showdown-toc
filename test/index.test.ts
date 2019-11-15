@@ -17,7 +17,6 @@ describe('test/index.test.ts', () => {
     it(`should output correct html content - ${name}`, () => {
       const showdown = new Showdown.Converter({ extensions: [showdownToc(option)] });
       const output = showdown.makeHtml(input);
-      fs.writeFileSync('test.txt', output);
       expect(output).toEqual(expected);
     });
   });
