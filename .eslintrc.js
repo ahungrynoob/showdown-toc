@@ -13,6 +13,8 @@ module.exports = {
     'no-param-reassign': 'off',
     'prefer-destructuring': 'off',
     'no-plusplus': 'off',
+    'import/no-dynamic-require': 'off',
+    'global-require': 'off',
   },
   globals: {
     __CLIENT__: true,
