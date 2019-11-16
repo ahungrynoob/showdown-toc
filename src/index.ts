@@ -15,7 +15,7 @@ type MetaInfo =
       text: string;
     };
 
-function showdownToc({ toc }: { toc?: TocItem[] }) {
+function showdownToc({ toc }: { toc?: TocItem[] } = {}) {
   return () => [
     {
       type: 'output',
