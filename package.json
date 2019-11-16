@@ -1,6 +1,6 @@
 {
   "name": "showdown-toc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A showdown extension to output toc info.",
   "main": "dist/index.js",
   "unpkg": "dist/index.umd.min.js",

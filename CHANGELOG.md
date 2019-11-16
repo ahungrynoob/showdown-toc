@@ -1,4 +1,10 @@
 
+1.0.1 / 2019-11-16
+==================
+
+**fixes**
+  * [[`43acad6`](http://github.com/ahungrynoob/showdown-toc/commit/43acad67d91c5d1dd5bced5d94f3fb99680d9eff)] - fix: support no option (#3) (dxd <<dxd_sjtu@outlook.com>>)
+
 1.0.0 / 2019-11-16
 ==================
 
