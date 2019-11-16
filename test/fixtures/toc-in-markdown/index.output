@@ -1,0 +1,22 @@
+<h1 id="main-page-heading">Main Page Heading</h1>
+<p>This is the intro to the main page.</p>
+<h2 id="section-1">Section 1</h2>
+<p>A story.</p>
+<ol><li><a href="#part-1">Part 1</a></li><li><a href="#part-2">Part 2</a></li><li><a href="#part-3">Part 3</a></li></ol>
+<h3 id="part-1">Part 1</h3>
+<p>It was a nice day.</p>
+<h3 id="part-2">Part 2</h3>
+<p>There were stormy clouds on the horizon.</p>
+<h4 id="part-2a">Part 2A</h4>
+<p>They were very dark.</p>
+<h3 id="part-3">Part 3</h3>
+<p>Then it rained.</p>
+<h2 id="section-2">Section 2</h2>
+<p>Notice the section 2 header above is not included in the TOC of section 1? That's because each toc tag assumes it should stay in it's own section.</p>
+<ol><li><a href="#part-1-1">Part 1</a></li><li><a href="#part-2-1">Part 2</a></li><li><a href="#part-3-1">Part 3</a></li></ol>
+<h3 id="part-1-1">Part 1</h3>
+<h3 id="part-2-1">Part 2</h3>
+<h4 id="part-2a-1">Part 2A</h4>
+<p>Notice this heading isn't in the contents above. We only index the top level headings in each section, to keep things tidy. You may or may not like this, but that's the way it is. If you want to create a pull request with an option, you're welcome to! :)</p>
+<h3 id="part-3-1">Part 3</h3>
+<p>The End.</p>
