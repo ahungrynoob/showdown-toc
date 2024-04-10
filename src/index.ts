@@ -15,7 +15,11 @@ type MetaInfo =
       text: string;
     };
 
-function showdownToc({ toc }: { toc?: TocItem[] } = {}) {
+type TocOpts = {
+  listType: 'ol' | 'ul';
+};
+
+function showdownToc({ toc, opts }: { toc?: TocItem[]; opts?: TocOpts } = {}) {
   return () => [
     {
       type: 'output',
@@ -70,9 +74,10 @@ function showdownToc({ toc }: { toc?: TocItem[] } = {}) {
         source = source.replace(/<p>\[toc\]<\/p>[\n]*/g, () => {
           const headers = tocCollection.shift();
           if (headers && headers.length) {
-            const str = `<ol>${headers
+            const listType = opts?.listType || 'ol';
+            const str = `<${listType} class="showdown-toc">${headers
               .map(({ text, anchor }) => `<li><a href="#${anchor}">${text}</a></li>`)
-              .join('')}</ol>\n`;
+              .join('')}</${listType}>\n`;
             return str;
           }
           return '';

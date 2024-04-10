@@ -54,6 +54,17 @@ The `toc` array you pass in `showdownToc` will be:
 ]
 ```
 
+The table of contents will output by default as an ordered list `<ol>`. You can change this to an unordered list `<ul>` by passing in a second parameter of options:
+
+```javascript
+const content = 'your markdown content';
+const toc = [];
+const opts = { listType: 'ul' };
+const showdown = new Showdown.Converter({ extensions: [showdownToc({ toc, opts })] });
+const result = showdown.makeHtml(content);
+return result;
+```
+
 ### 2. output table of contents into your html string
 In your markdown just put a [toc] where you want a Table of Contents to appear. This extension will look for the first header after the [toc] and use whatever it finds first as the element for the rest of the TOC.
 
