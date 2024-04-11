@@ -1,51 +1,39 @@
 {
   "name": "showdown-toc",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A showdown extension to output toc info.",
-  "main": "dist/index.js",
-  "unpkg": "dist/index.umd.min.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "father build",
-    "test": "father test",
-    "ci": "father test --coverage",
-    "lint-staged": "lint-staged",
-    "lint-staged:ts": "eslint --ext .ts,.tsx",
-    "lint:fix": "eslint --fix --cache --format=pretty **/*.ts",
-    "lint:ts": "eslint --cache --format=pretty **/*.ts"
-  },
-  "files": [
-    "dist"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*.{ts,json}": [
-      "prettier --write",
-      "git add"
-    ],
-    "**/*.ts": "npm run lint-staged:ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ahungrynoob/showdown-toc.git"
-  },
   "keywords": [
     "showdown-extension",
     "showdown",
     "markdown",
     "markdown-toc"
   ],
-  "author": "ahungrynoob",
-  "license": "MIT",
+  "homepage": "https://github.com/ahungrynoob/showdown-toc#readme",
   "bugs": {
     "url": "https://github.com/ahungrynoob/showdown-toc/issues"
   },
-  "homepage": "https://github.com/ahungrynoob/showdown-toc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahungrynoob/showdown-toc.git"
+  },
+  "license": "MIT",
+  "author": "ahungrynoob",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.umd.min.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "father build",
+    "ci": "father test --coverage",
+    "lint-staged": "lint-staged",
+    "lint-staged:ts": "eslint --ext .ts,.tsx",
+    "lint:fix": "eslint --fix --cache --format=pretty **/*.ts",
+    "lint:ts": "eslint --cache --format=pretty **/*.ts",
+    "test": "father test"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "@types/showdown": "^1.9.3",
